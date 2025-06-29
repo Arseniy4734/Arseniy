@@ -1,0 +1,222 @@
+/* Основные стили */
+body {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow-x: hidden;
+    background: #0a0a1a;
+}
+
+/* Видео-фон */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+/* Стеклянный эффект */
+.glass {
+    background: rgba(20, 20, 40, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Навигация */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: fixed;
+    width: 90%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.menu a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #8a2be2;
+}
+
+/* Главный экран */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    background: linear-gradient(45deg, #6e45e2, #88d3ce);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(110, 69, 226, 0.5);
+}
+
+/* Карточки услуг */
+.services {
+    display: flex;
+    justify-content: center;
+    padding: 100px 20px;
+    gap: 30px;
+}
+
+.card {
+    padding: 30px;
+    width: 300px;
+    transition: transform 0.5s;
+}
+
+.card:hover {
+    transform: translateY(-10px) rotate(2deg);
+    background: rgba(80, 60, 150, 0.7);
+}
+
+button {
+    position: relative;
+    overflow: hidden;
+}
+button::before {
+    content: "";
+    position: absolute;
+    top: calc(var(--mouse-y, 0) * 1%);
+    left: calc(var(--mouse-x, 0) * 1%);
+    transform: translate(-50%, -50%);
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+button:hover::before {
+    opacity: 1;
+}
+
+img {
+    width: 3%;
+    height: 4%;
+}
+
+
+
+
+/* Раздел "Обо мне" */
+.about {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #8a2be2;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Контакты */
+.contacts {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.icon {
+    font-size: 3rem;
+    color: white;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    color: #6e45e2;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(10, 10, 20, 0.8);
+}
+
+footer .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #6e45e2, #88d3ce);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+
+
+.icon {
+    background: linear-gradient(45deg, #6e45e2, #88d3ce);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.icon:hover {
+    filter: drop-shadow(0 0 10px #6e45e2);
+}
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .social-icons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+button:active {
+    transform: scale(0.95) !important;  /* Эффект нажатия */
+    background: linear-gradient(45deg, #5a2be2, #70c0b0) !important;
+}

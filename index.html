@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ваш Сайт | Крутые анимации</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Видео-фон -->
+    <video autoplay muted loop id="bg-video">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-digital-grid-158-large.mp4" type="video/mp4">
+    </video>
+
+    <!-- Шапка -->
+    <nav class="glass">
+        <img href="file:///D:/js%20project/sitemy/index.html" src="lol.jpg" alt="logo" >
+        <div class="menu">
+            <a href="#services">Услуги</a>
+            <a href="#about">Обо мне</a>
+            <a href="#contacts">Контакты</a>
+        </div>
+    </nav>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <h1 class="animate__animated animate__fadeInDown">Arseniy</h1>
+        <p class="animate__animated animate__fadeInUp animate__delay-1s">Frontend</p>
+       <button class="animate__animated animate__zoomIn animate__delay-2s" onclick="scrollToServices()">Начать</button>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="services">
+        <div class="card glass animate__animated animate__fadeInLeft">
+            <h3>Продюсирование</h3>
+            <p>Профессиональная помощь в создании контента.</p>
+        </div>
+        <div class="card glass animate__animated animate__fadeInRight">
+            <h3>Консультации</h3>
+            <p>Разберём ваш проект и найдём лучшие решения.</p>
+        </div>
+    </section>
+
+    <!-- Подключаем скрипты -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html><!-- Раздел "Обо мне" -->
+    <section id="about" class="about glass animate__animated animate__fadeIn">
+        <h2>Меня зовут Арсений</h2>
+        <p>Мне 12 лет, и я уже освоил базу Python! 🐍</p>
+        <p>Сейчас изучаю <strong>HTML, CSS и JavaScript</strong>, чтобы создавать крутые сайты.</p>
+        <p>Этот сайт — мой первый проект. 💻</p>
+    </section>
+
+    <!-- Раздел "Контакты" -->
+    <section id="contacts" class="contacts">
+        <h2>Мои контакты</h2>
+        <div class="social-icons">
+            <!-- Telegram -->
+            <a href="https://t.me/arseniy5810" target="_blank" class="icon animate__animated animate__bounceIn">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <!-- VK -->
+            <a href="https://vk.com/senya474395" target="_blank" class="icon animate__animated animate__bounceIn animate__delay-1s">
+                <i class="fab fa-vk"></i>
+            </a>
+            <!-- Твой сайт -->
+            <a href="#" class="icon animate__animated animate__bounceIn animate__delay-2s">
+                <i class="fas fa-globe"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Подвал с логотипом -->
+    <footer>
+        <div class="logo">Arseniy</div>
+        <p>© 2024 Мой первый сайт</p>
+    </footer>
+</body>
+</html>
